@@ -9,7 +9,7 @@ function createTankCard(data, x) {
   Id.innerText = num.toString(10);
 
   var image = document.createElement("IMG");
-  image.classList.add("nicelittletankimage");
+  image.classList.add("TankImage");
 
   var location_desc = document.createElement("DIV");
   location_desc.classList.add("location-desc");
@@ -68,16 +68,16 @@ function createTankCard(data, x) {
 document.getElementById("addtank").addEventListener("click", function(event) {
   event.preventDefault();
 
-  let Llocation = document.getElementById("TL").value;
-  let Llat = document.getElementById("lat").value;
-  let Llong = document.getElementById("long").value;
-  let Lpercentage_full = document.getElementById("perc_full").value;
+  let TLocation = document.getElementById("TL").value;
+  let TLatitude = document.getElementById("lat").value;
+  let TLongitude = document.getElementById("long").value;
+  let TPfull = document.getElementById("perc_full").value;
 
   let jsonBody = {
-      location:Llocation,
-      lat:Llat,
-      long:Llong,
-      percentage_full:Lpercentage_full,
+      location:TLocation,
+      lat:TLatitude,
+      long:TLongitude,
+      percentage_full:TPfull,
   }
 
   fetch("http://localhost:5000/data" , {
